@@ -109,7 +109,7 @@ a:hover {
 	opacity: 0;	
 	transition: opacity 0.25s;
 	display: flex;
-	color: #000000;
+	color: #ffffff;
 	background: linear-gradient(to bottom, #3027aa, #b1321c);
 	border-radius: 30%;
 
@@ -117,6 +117,15 @@ a:hover {
 
 .image__overlay:hover{
 	opacity: 0.9;
+}
+
+.image__overlay > * {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover > * {
+	transform: translateY(0);
 }
 
 .image__title{
