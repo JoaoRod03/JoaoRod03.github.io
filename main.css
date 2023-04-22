@@ -1,0 +1,305 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    text-align: center;
+	background-color: #858585;
+}
+
+header {
+	background-color: rgb(0, 0, 0);
+    color: #ffffff; /* Changes the color of text in the h1 element to a shade of blue */
+    font-size: 40px;
+	height: 75px;
+	padding:1rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 0px;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 25px;
+}
+
+nav a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	
+}
+
+
+footer {
+	background-color: rgb(0, 0, 0);
+    color: #ffffff; /* Changes the color of text in the h1 element to a shade of blue */
+    font-size: 25px;
+	position: absolute; /* set the position property to absolute */
+  	bottom: 0; /* position the footer element at the bottom of the containing block */
+  	left: 0; /* position the footer element at the left of the containing block */
+  	right: 0; /* position the footer element at the right of the containing block */
+  	height: 80px; /* set the height of the footer */
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.img123 {
+	position: relative;
+	top: 150px;
+	left: -550px;
+	border-radius: 30%;
+	width: 60%;
+	height: 60%;
+}
+
+#home p{
+	max-width: 175ch;
+	margin: auto;
+}
+
+.description{
+	margin-left: 200px;
+	margin-top: -250px;
+	font-size:x-large;
+}
+
+.tab1 {
+	position: fixed;
+	top: 20%;
+	right: -84px;
+	transform: translateX(-20%);
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	z-index: 9999;
+	height: 100px;
+  }
+  
+.tab1:hover {
+	width: 400px;	
+}
+
+.svg1 {
+  fill: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out;
+}	
+
+.tab1:hover .svg1 {
+	transform: translateX(-75px);
+}
+
+.tab-content {
+  display: none;
+  margin-right: -150px;
+  margin-top: -75px;
+}
+
+.tab1:hover .tab-content {
+  display: block;
+}
+  
+
+.tab2 {
+	position: fixed;
+	top: 35%;
+	right: -84px;
+	transform: translateX(-20%);
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	z-index: 9999;
+	height: 100px;
+  }
+  
+.tab2:hover {
+	width: 400px;	
+}
+
+.svg2 {
+  fill: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out;
+}	
+
+.tab2:hover .svg2 {
+	transform: translateX(-75px);
+}
+
+.tab-content {
+  display: none;
+  margin-right: -150px;
+  margin-top: -75px;
+}
+
+.tab2:hover .tab-content {
+  display: block;
+}
+
+.tab3 {
+	position: fixed;
+	top: 50%;
+	right: -84px;
+	transform: translateX(-20%);
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	z-index: 9999;
+	height: 100px;
+  }
+  
+.tab3:hover {
+	width: 400px;	
+}
+
+.svg3 {
+  fill: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out;
+}	
+
+.tab3:hover .svg3 {
+	transform: translateX(-75px);
+}
+
+.tab-content {
+  display: none;
+  margin-right: -150px;
+  margin-top: -75px;
+}
+
+.tab3:hover .tab-content {
+  display: block;
+}
+
+.tab2 {
+	position: fixed;
+	top: 35%;
+	right: -84px;
+	transform: translateX(-20%);
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	z-index: 9999;
+	height: 100px;
+  }
+  
+.tab2:hover {
+	width: 400px;	
+}
+
+.svg2 {
+  fill: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out;
+}	
+
+.tab2:hover .svg2 {
+	transform: translateX(-75px);
+}
+
+.tab-content {
+  display: none;
+  margin-right: -150px;
+  margin-top: -75px;
+}
+
+.tab2:hover .tab-content {
+  display: block;
+}
+
+.tab4 {
+	position: fixed;
+	top: 65%;
+	right: -84px;
+	transform: translateX(-20%);
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	z-index: 9999;
+	height: 100px;
+  }
+  
+.tab4:hover {
+	width: 400px;	
+}
+
+.svg4 {
+  fill: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  transition: transform 0.3s ease-in-out;
+}	
+
+.tab4:hover .svg4 {
+	transform: translateX(-75px);
+}
+
+.tab-content {
+  display: none;
+  margin-right: -150px;
+  margin-top: -75px;
+}
+
+.tab4:hover .tab-content {
+  display: block;
+}
