@@ -75,16 +75,58 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	background-color: #000000;
+	border: 2px solid #000000;
+	padding: 10px;
+
 }
 
-.img123 {
+.image {
+	position: relative;
+	width: 800px;
+	
+}
+
+.image1 {
 	position: relative;
 	top: 150px;
 	left: -550px;
 	border-radius: 30%;
 	width: 60%;
 	height: 60%;
+	box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+
+.image__overlay{
+	position: absolute;
+	top:150px;
+	left:-390px;
+	width: 60%;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;	
+	transition: opacity 0.25s;
+	display: flex;
+	color: #000000;
+	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	border-radius: 30%;
+
+}
+
+.image__overlay:hover{
+	opacity: 0.9;
+}
+
+.image__title{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description{
+	font-size: 1.25em;
+	margin-top: 100px;
 }
 
 #home p{
@@ -95,7 +137,7 @@ a:hover {
 .description{
 	margin-left: 200px;
 	margin-top: -250px;
-	font-size:x-large;
+	font-size:xx-large;
 }
 
 .tab1 {
@@ -111,6 +153,8 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
+	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
 .tab1:hover {
@@ -153,6 +197,8 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
+	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
 .tab2:hover {
@@ -194,6 +240,8 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
+	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
 .tab3:hover {
@@ -221,48 +269,7 @@ a:hover {
 .tab3:hover .tab-content {
   display: block;
 }
-
-.tab2 {
-	position: fixed;
-	top: 35%;
-	right: -84px;
-	transform: translateX(-20%);
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
-	width: 200px;
-	text-align: center;
-	transition: all 0.3s ease-in-out;
-	z-index: 9999;
-	height: 100px;
-  }
-  
-.tab2:hover {
-	width: 400px;	
-}
-
-.svg2 {
-  fill: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
-  transition: transform 0.3s ease-in-out;
-}	
-
-.tab2:hover .svg2 {
-	transform: translateX(-75px);
-}
-
-.tab-content {
-  display: none;
-  margin-right: -150px;
-  margin-top: -75px;
-}
-
-.tab2:hover .tab-content {
-  display: block;
-}
-
+ 
 .tab4 {
 	position: fixed;
 	top: 65%;
@@ -276,6 +283,8 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
+	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
 .tab4:hover {
