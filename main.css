@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
     text-align: center;
-	background-color: #858585;
+	background-color: #0c0f3d;
 }
 
 header {
@@ -147,6 +147,7 @@ a:hover {
 	margin-left: 200px;
 	margin-top: -250px;
 	font-size:xx-large;
+	color: #fff;
 }
 
 .tab1 {
