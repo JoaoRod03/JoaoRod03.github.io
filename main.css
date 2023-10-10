@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
     text-align: center;
-	background-color: #0c0f3d;
+	background-color: #727272;
 }
 
 header {
@@ -70,7 +70,7 @@ li {
 }
 
 a {
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	text-decoration: none;
 }
 
@@ -78,7 +78,7 @@ a:hover {
 	background-color: #000000;
 	border: 2px solid #000000;
 	padding: 10px;
-
+	color: rgb(255, 255, 255);
 }
 
 .image {
@@ -96,7 +96,7 @@ a:hover {
 	height: 60%;
 	box-shadow: 0 5px 10px rgb(0, 0, 0);
 }
-
+/*
 .image__overlay{
 	position: absolute;
 	top:150px;
@@ -110,6 +110,7 @@ a:hover {
 	transition: opacity 0.25s;
 	display: flex;
 	color: #ffffff;
+	background-color: rgb(255, 255, 255);
 	background: linear-gradient(to bottom, #3027aa, #b1321c);
 	border-radius: 30%;
 
@@ -127,27 +128,29 @@ a:hover {
 .image__overlay:hover > * {
 	transform: translateY(0);
 }
-
+*/
 .image__title{
 	font-size: 2em;
 	font-weight: bold;
+	margin-left: 250px;
+	margin-top: -330px;
 }
-
+/*
 .image__description{
 	font-size: 1.25em;
 	margin-top: 100px;
 }
-
+*/
 #home p{
 	max-width: 175ch;
 	margin: auto;
 }
 
 .description{
-	margin-left: 200px;
-	margin-top: -250px;
+	margin-left: 250px;
+	margin-top: -50px;
 	font-size:xx-large;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .tab1 {
@@ -155,15 +158,15 @@ a:hover {
 	top: 20%;
 	right: -84px;
 	transform: translateX(-20%);
-	background-color: #333;
-	color: #fff;
+	background-color: rgb(80, 80, 80);
+	color: rgb(0, 0, 0);
 	padding: 10px;
 	width: 200px;
 	text-align: center;
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
-	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
 	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
@@ -172,7 +175,7 @@ a:hover {
 }
 
 .svg1 {
-  fill: rgb(0, 0, 0);
+  fill: rgb(255, 255, 255);
   width: 100px;
   height: 100px;
   margin-right: 50px;
@@ -199,7 +202,7 @@ a:hover {
 	top: 35%;
 	right: -84px;
 	transform: translateX(-20%);
-	background-color: #333;
+	background-color: rgb(80, 80, 80);
 	color: #fff;
 	padding: 10px;
 	width: 200px;
@@ -207,7 +210,7 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
-	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
 	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
@@ -242,7 +245,7 @@ a:hover {
 	top: 50%;
 	right: -84px;
 	transform: translateX(-20%);
-	background-color: #333;
+	background-color: rgb(80, 80, 80);
 	color: #fff;
 	padding: 10px;
 	width: 200px;
@@ -250,7 +253,7 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
-	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
 	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
@@ -285,7 +288,7 @@ a:hover {
 	top: 65%;
 	right: -84px;
 	transform: translateX(-20%);
-	background-color: #333;
+	background-color: rgb(80, 80, 80);
 	color: #fff;
 	padding: 10px;
 	width: 200px;
@@ -293,7 +296,7 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	z-index: 9999;
 	height: 100px;
-	background: linear-gradient(to bottom, #3027aa, #b1321c);
+	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
 	box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
@@ -321,4 +324,18 @@ a:hover {
 
 .tab4:hover .tab-content {
   display: block;
+}
+
+@media only screen and (max-width: 600px) {
+	main {
+	  padding: 2rem;
+	}
+  
+	footer p {
+	  margin-right: 15px;
+	}
+	
+	* {
+	  transform: scale (0.6, 0.6);
+	}
 }
