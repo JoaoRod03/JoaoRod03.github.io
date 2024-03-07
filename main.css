@@ -1,107 +1,146 @@
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-    text-align: center;
-	background-color: #727272;
+	font-family: "Helvetica Neue";
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #000000;
+    overflow:auto; /* Prevents stars from overflowing the screen */
+}
+
+/*------------------------------------Background--------------------------------------------*/
+
+/*---------------------------------Header-----------------------------------------------*/
+
+headerline {
+	background-color: rgb(0, 0, 0);
+	color: #ffffff;
+	height: 2px;
+	position: fixed;
+	z-index: 3; /* Ensure header and footer are above the stars */
+	left: 0;
+	right: 0;
 }
 
 header {
-	background-color: rgb(0, 0, 0);
-    color: #ffffff; /* Changes the color of text in the h1 element to a shade of blue */
-    font-size: 40px;
-	height: 75px;
-	padding:1rem;
+	position: relative;
 }
 
-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	line-height: 0px;
-}
 
-nav li {
+
+nav {
 	display: inline-block;
-	margin: 0 25px;
-}
-
-nav a {
-	color: rgb(255, 255, 255);
-	text-decoration: none;
-}
-
-main {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
+	position: relative;
+	left: 50%;
+	margin-top: 15px;
+	transform: translateX(-50%);
+	font-size: 40px; /* Increase the font size */
+	color: #ffffff;
 	
 }
 
+/*---------------------------------Main-----------------------------------------------*/
 
-footer {
-	background-color: rgb(0, 0, 0);
-    color: #ffffff; /* Changes the color of text in the h1 element to a shade of blue */
-    font-size: 25px;
-	position: absolute; /* set the position property to absolute */
-  	bottom: 0; /* position the footer element at the bottom of the containing block */
-  	left: 0; /* position the footer element at the left of the containing block */
-  	right: 0; /* position the footer element at the right of the containing block */
-  	height: 80px; /* set the height of the footer */
+main {
+	position: relative;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-section {
-	margin-bottom: 50px;
-}
 
-h1 {
-	font-size: 40px;
-	margin-bottom: 20px;
-}
+/*---------------------------------About-----------------------------------------------*/
 
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-li {
-	margin-bottom: 10px;
-}
-
-a {
-	color: rgb(0, 0, 0);
-	text-decoration: none;
-}
-
-a:hover {
-	background-color: #000000;
-	border: 2px solid #000000;
-	padding: 10px;
-	color: rgb(255, 255, 255);
+.about {
+	position: relative;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 .image {
 	position: relative;
-	width: 800px;
+	z-index: 2;
+	align-items: center;
+	margin-top: 50px;
+	margin-left: 37.2%;
 	
 }
 
-.image1 {
+.description{
 	position: relative;
-	top: 150px;
-	left: -550px;
-	border-radius: 30%;
-	width: 60%;
-	height: 60%;
-	box-shadow: 0 5px 10px rgb(0, 0, 0);
+	font-size: xx-large;
+	color: rgb(255, 255, 255);
+	max-width: 60%;
+	text-align: center; /* Center the text */
+	margin-left: 20%;
 }
-/*
-.image__overlay{
-	position: absolute;
-	top:150px;
-	left:-390px;
-	width: 60%;
+
+
+/*---------------------------------Contacts-----------------------------------------------*/
+
+.contacts{
+	margin-top: 100px;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+
+.contactsContainer {
+	display: flex;
+	position: relative;
+	justify-content: space-around;
+	background-color: rgba(255, 255, 255, 0.55); /* Example light grey background with 80% opacity */
+	padding: 20px; /* Example padding */
+	border: 1px solid #ffffff; 
+	box-shadow: 0 4px 8px rgb(255, 0, 0); /* Example subtle shadow */
+	width: 70%; /* Example width, adjust as needed */
+	border-radius: 20px; /* Optional: Adds rounded corners to the rectangle */
+}
+
+.contactsContainer a {
+	width: 60px;
+	height: 60px;
+}
+
+
+/* ---------------------------------Projects -----------------------------------------------*/
+
+.projects {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+}
+
+.project1 {
+    position: relative;
+	width: 350px; /* Set the width of the diamond */
+}
+
+/* Styling for the image inside the diamond */
+.image1 {
+	width: 350px; /* Set the width of the diamond */
+    height: 350px; /* Set the height of the diamond */
+	position: relative; /* Position absolute for precise placement */
+    top: 200px; /* Adjust the top position to center the diamond */
+    left: -150px; /* Align the diamond horizontally */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */;
+}
+
+/* Initial state of project1-content: hidden */
+.project1-description {
+    position: absolute;
+	top: 200px; /* Adjust the top position to center the diamond */
+    left: -150px; /* Align the diamond horizontally */
+	width: 100%;
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
@@ -110,221 +149,110 @@ a:hover {
 	transition: opacity 0.25s;
 	display: flex;
 	color: #ffffff;
-	background-color: rgb(255, 255, 255);
 	background: linear-gradient(to bottom, #3027aa, #b1321c);
 	border-radius: 30%;
-
 }
 
-.image__overlay:hover{
-	opacity: 0.9;
+/* When hovering over project1, change project1-content to be visible */
+.project1-description:hover{
+    opacity: 0.9;
 }
 
-.image__overlay > * {
+.project1-description > * {
 	transform: translateY(20px);
 	transition: transform 0.25s;
 }
 
-.image__overlay:hover > * {
+.project1-description > * {
 	transform: translateY(0);
 }
-*/
-.image__title{
-	font-size: 2em;
-	font-weight: bold;
-	margin-left: 250px;
-	margin-top: -330px;
-}
-/*
-.image__description{
-	font-size: 1.25em;
-	margin-top: 100px;
-}
-*/
-#home p{
-	max-width: 175ch;
-	margin: auto;
+
+.project2 {
+    width: 350px; /* Set the width of the diamond */
+    height: 350px; /* Set the height of the diamond */
+    position: relative; /* Position absolute for precise placement */
+    top: 60px; /* Adjust the top position to center the diamond */
+    left: 55px; /* Align the diamond horizontally */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
+	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
 }
 
-.description{
-	margin-left: 250px;
-	margin-top: -50px;
-	font-size:xx-large;
-	color: rgb(0, 0, 0);
+/* Styling for the image inside the diamond */
+.project2 img {
+    width: 100%; /* Make the image fill the diamond container */
+    height: 100%; /* Make the image fill the diamond container */
+    object-fit: cover; /* Ensure the image covers the diamond container */
 }
 
-.tab1 {
-	position: fixed;
-	top: 20%;
-	right: -84px;
-	transform: translateX(-20%);
-	background-color: rgb(80, 80, 80);
-	color: rgb(0, 0, 0);
-	padding: 10px;
-	width: 200px;
+.project3 {
+    width: 350px; /* Set the width of the diamond */
+    height: 350px; /* Set the height of the diamond */
+    position: relative; /* Position absolute for precise placement */
+    top: -80px; /* Adjust the top position to center the diamond */
+    left: -150px; /* Align the diamond horizontally */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
+	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
+}
+
+/* Styling for the image inside the diamond */
+.project3 img {
+    width: 100%; /* Make the image fill the diamond container */
+    height: 100%; /* Make the image fill the diamond container */
+    object-fit: cover; /* Ensure the image covers the diamond container */
+}
+
+
+.project4 {
+    width: 350px; /* Set the width of the diamond */
+    height: 350px; /* Set the height of the diamond */
+    position: relative; /* Position absolute for precise placement */
+    top: -220px; /* Adjust the top position to center the diamond */
+    left: 55px; /* Align the diamond horizontally */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
+	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
+}
+
+/* Styling for the image inside the diamond */
+.project4 img {
+    width: 100%; /* Make the image fill the diamond container */
+    height: 100%; /* Make the image fill the diamond container */
+    object-fit: cover; /* Ensure the image covers the diamond container */
+}
+
+.project5 {
+    width: 350px; /* Set the width of the diamond */
+    height: 350px; /* Set the height of the diamond */
+    position: relative; /* Position absolute for precise placement */
+    top: -360px; /* Adjust the top position to center the diamond */
+    left: -150px; /* Align the diamond horizontally */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
+	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
+}
+
+/* Styling for the image inside the diamond */
+.project5 img {
+    width: 100%; /* Make the image fill the diamond container */
+    height: 100%; /* Make the image fill the diamond container */
+    object-fit: cover; /* Ensure the image covers the diamond container */
+}
+
+/*---------------------------------Footer-----------------------------------------------*/
+
+footer {
+	background-color: rgb(0, 0, 0);
+    color: #ffffff; /* Changes the color of text in the h1 element to a shade of blue */
+    font-size: 25px;
+	position: relative ; /* set the position property to absolute */
+  	height: 50px; /* set the height of the footer */
+	z-index: 1; /* Ensure header and footer are above the stars */
 	text-align: center;
-	transition: all 0.3s ease-in-out;
-	z-index: 9999;
-	height: 100px;
-	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
-	box-shadow: 0 5px 10px rgb(0, 0, 0);
-  }
-  
-.tab1:hover {
-	width: 400px;	
 }
 
-.svg1 {
-  fill: rgb(255, 255, 255);
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
-  transition: transform 0.3s ease-in-out;
-}	
 
-.tab1:hover .svg1 {
-	transform: translateX(-75px);
-}
 
-.tab-content {
-  display: none;
-  margin-right: -150px;
-  margin-top: -75px;
-}
+/*---------------------------------Tabs-----------------------------------------------*/
 
-.tab1:hover .tab-content {
-  display: block;
-}
-  
 
-.tab2 {
-	position: fixed;
-	top: 35%;
-	right: -84px;
-	transform: translateX(-20%);
-	background-color: rgb(80, 80, 80);
-	color: #fff;
-	padding: 10px;
-	width: 200px;
-	text-align: center;
-	transition: all 0.3s ease-in-out;
-	z-index: 9999;
-	height: 100px;
-	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
-	box-shadow: 0 5px 10px rgb(0, 0, 0);
-  }
-  
-.tab2:hover {
-	width: 400px;	
-}
-
-.svg2 {
-  fill: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
-  transition: transform 0.3s ease-in-out;
-}	
-
-.tab2:hover .svg2 {
-	transform: translateX(-75px);
-}
-
-.tab-content {
-  display: none;
-  margin-right: -150px;
-  margin-top: -75px;
-}
-
-.tab2:hover .tab-content {
-  display: block;
-}
-
-.tab3 {
-	position: fixed;
-	top: 50%;
-	right: -84px;
-	transform: translateX(-20%);
-	background-color: rgb(80, 80, 80);
-	color: #fff;
-	padding: 10px;
-	width: 200px;
-	text-align: center;
-	transition: all 0.3s ease-in-out;
-	z-index: 9999;
-	height: 100px;
-	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
-	box-shadow: 0 5px 10px rgb(0, 0, 0);
-  }
-  
-.tab3:hover {
-	width: 400px;	
-}
-
-.svg3 {
-  fill: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
-  transition: transform 0.3s ease-in-out;
-}	
-
-.tab3:hover .svg3 {
-	transform: translateX(-75px);
-}
-
-.tab-content {
-  display: none;
-  margin-right: -150px;
-  margin-top: -75px;
-}
-
-.tab3:hover .tab-content {
-  display: block;
-}
- 
-.tab4 {
-	position: fixed;
-	top: 65%;
-	right: -84px;
-	transform: translateX(-20%);
-	background-color: rgb(80, 80, 80);
-	color: #fff;
-	padding: 10px;
-	width: 200px;
-	text-align: center;
-	transition: all 0.3s ease-in-out;
-	z-index: 9999;
-	height: 100px;
-	/*background: linear-gradient(to bottom, #3027aa, #b1321c);*/
-	box-shadow: 0 5px 10px rgb(0, 0, 0);
-  }
-  
-.tab4:hover {
-	width: 400px;	
-}
-
-.svg4 {
-  fill: rgb(0, 0, 0);
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
-  transition: transform 0.3s ease-in-out;
-}	
-
-.tab4:hover .svg4 {
-	transform: translateX(-75px);
-}
-
-.tab-content {
-  display: none;
-  margin-right: -150px;
-  margin-top: -75px;
-}
-
-.tab4:hover .tab-content {
-  display: block;
-}
 
 @media only screen and (max-width: 600px) {
 	main {
