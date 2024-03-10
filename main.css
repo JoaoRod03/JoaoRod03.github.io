@@ -36,7 +36,11 @@ nav {
 	transform: translateX(-50%);
 	font-size: 40px; /* Increase the font size */
 	color: #ffffff;
-	
+}
+
+nav p {
+	color: #ffffff;
+	text-shadow: 0 4px 15px rgb(255, 0, 0); /* Example subtle shadow */
 }
 
 /*---------------------------------Main-----------------------------------------------*/
@@ -66,9 +70,12 @@ main {
 	align-items: center;
 	margin-top: 50px;
 	margin-left: 37.2%;
-	
 }
-
+/*
+.imageMe {
+	box-shadow: 0 4px 15px rgb(255, 0, 0);
+}
+*/
 .description{
 	position: relative;
 	font-size: xx-large;
