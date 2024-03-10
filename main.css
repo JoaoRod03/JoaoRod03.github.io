@@ -112,6 +112,11 @@ main {
 .contactsContainer a {
 	width: 60px;
 	height: 60px;
+	transition: .5s ease;
+}
+
+.contactsContainer a:hover {
+	transform: scale(1.1);
 }
 
 
