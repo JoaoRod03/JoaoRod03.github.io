@@ -17,7 +17,6 @@ headerline {
 	color: #ffffff;
 	height: 2px;
 	position: fixed;
-	z-index: 3; /* Ensure header and footer are above the stars */
 	left: 0;
 	right: 0;
 }
@@ -34,13 +33,13 @@ nav {
 	left: 50%;
 	margin-top: 15px;
 	transform: translateX(-50%);
-	font-size: 40px; /* Increase the font size */
 	color: #ffffff;
 }
 
-nav p {
+nav h1 {
 	color: #ffffff;
 	text-shadow: 0 4px 15px rgb(255, 0, 0); /* Example subtle shadow */
+	font-size: 40px;
 }
 
 /*---------------------------------Main-----------------------------------------------*/
@@ -69,7 +68,6 @@ main {
 	z-index: 2;
 	align-items: center;
 	margin-top: 50px;
-	margin-left: 37.2%;
 }
 /*
 .imageMe {
@@ -82,7 +80,6 @@ main {
 	color: rgb(255, 255, 255);
 	max-width: 60%;
 	text-align: center; /* Center the text */
-	margin-left: 20%;
 }
 
 
@@ -119,133 +116,93 @@ main {
 	transform: scale(1.1);
 }
 
-
-/* ---------------------------------Projects -----------------------------------------------*/
+/*---------------------------------Projects-----------------------------------------------*/
 
 .projects {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	margin-top: 100px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.projects h3 {
 	color: #ffffff;
+	font-size: 35px;
 }
 
-.project1 {
-    position: relative;
-	width: 350px; /* Set the width of the diamond */
+.projects .projectsContainer{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	align-items: center;
+	gap: 2.5rem;
+	margin: 4rem;
 }
 
-/* Styling for the image inside the diamond */
-.image1 {
-	width: 350px; /* Set the width of the diamond */
-    height: 350px; /* Set the height of the diamond */
-	position: relative; /* Position absolute for precise placement */
-    top: 200px; /* Adjust the top position to center the diamond */
-    left: -150px; /* Align the diamond horizontally */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */;
+/*---------------------------------Each Project-----------------------------------------------*/
+
+.projectsContainer .project{
+	position: relative;
+	display: flex;
+	border-radius: 2rem;
+	box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+	overflow: hidden;
 }
 
-/* Initial state of project1-content: hidden */
-.project1-description {
-    position: absolute;
-	top: 200px; /* Adjust the top position to center the diamond */
-    left: -150px; /* Align the diamond horizontally */
+.project:hover{
+	box-shadow: 0 0px 7px rgb(255, 0, 0); /* Example subtle shadow */
+}
+
+.project img{
+	width: 100%;
+	object-fit: cover;
+	transition: .5s ease;
+}
+
+.project:hover img{
+	transform: scale(1.1);
+}
+
+.project .layer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	background: rgba(0,0,0,1);
+	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	opacity: 0;	
-	transition: opacity 0.25s;
-	display: flex;
+	opacity: 0;
+	transition: .5s ease;
 	color: #ffffff;
-	background: linear-gradient(to bottom, #3027aa, #b1321c);
-	border-radius: 30%;
+	
 }
 
-/* When hovering over project1, change project1-content to be visible */
-.project1-description:hover{
-    opacity: 0.9;
+.project .layer h3{
+	max-width: 80%;
+	margin-bottom: 0;
+	margin-top: 0;
+	cursor:default;	
 }
 
-.project1-description > * {
-	transform: translateY(20px);
-	transition: transform 0.25s;
+.project .layer p{
+	max-width: 80%;
+	cursor:default;
 }
 
-.project1-description > * {
-	transform: translateY(0);
+.project .layer a{
+	text-decoration: none;
+	color: #ffffff;
+	transition: .5s ease;
 }
 
-.project2 {
-    width: 350px; /* Set the width of the diamond */
-    height: 350px; /* Set the height of the diamond */
-    position: relative; /* Position absolute for precise placement */
-    top: 60px; /* Adjust the top position to center the diamond */
-    left: 55px; /* Align the diamond horizontally */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
-	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
+.project .layer a:hover{
+	color: rgb(255, 0, 0);
+	text-shadow: 0 0px 8px rgb(255, 0, 0); /* Example subtle shadow */
 }
 
-/* Styling for the image inside the diamond */
-.project2 img {
-    width: 100%; /* Make the image fill the diamond container */
-    height: 100%; /* Make the image fill the diamond container */
-    object-fit: cover; /* Ensure the image covers the diamond container */
-}
-
-.project3 {
-    width: 350px; /* Set the width of the diamond */
-    height: 350px; /* Set the height of the diamond */
-    position: relative; /* Position absolute for precise placement */
-    top: -80px; /* Adjust the top position to center the diamond */
-    left: -150px; /* Align the diamond horizontally */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
-	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
-}
-
-/* Styling for the image inside the diamond */
-.project3 img {
-    width: 100%; /* Make the image fill the diamond container */
-    height: 100%; /* Make the image fill the diamond container */
-    object-fit: cover; /* Ensure the image covers the diamond container */
-}
-
-
-.project4 {
-    width: 350px; /* Set the width of the diamond */
-    height: 350px; /* Set the height of the diamond */
-    position: relative; /* Position absolute for precise placement */
-    top: -220px; /* Adjust the top position to center the diamond */
-    left: 55px; /* Align the diamond horizontally */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
-	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
-}
-
-/* Styling for the image inside the diamond */
-.project4 img {
-    width: 100%; /* Make the image fill the diamond container */
-    height: 100%; /* Make the image fill the diamond container */
-    object-fit: cover; /* Ensure the image covers the diamond container */
-}
-
-.project5 {
-    width: 350px; /* Set the width of the diamond */
-    height: 350px; /* Set the height of the diamond */
-    position: relative; /* Position absolute for precise placement */
-    top: -360px; /* Adjust the top position to center the diamond */
-    left: -150px; /* Align the diamond horizontally */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Create a diamond shape using clip-path */
-	background-color: rgb(255, 255, 255); /* Set the background color of the diamond */
-}
-
-/* Styling for the image inside the diamond */
-.project5 img {
-    width: 100%; /* Make the image fill the diamond container */
-    height: 100%; /* Make the image fill the diamond container */
-    object-fit: cover; /* Ensure the image covers the diamond container */
+.project:hover .layer{
+	opacity: 0.8;
 }
 
 /*---------------------------------Footer-----------------------------------------------*/
